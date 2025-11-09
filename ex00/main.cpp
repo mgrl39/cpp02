@@ -6,8 +6,19 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:53 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/07 23:36:54 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/08 16:42:22 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 
+int main( void ) {
+		Fixed a;
+		Fixed b( a );
+		Fixed c;
+		c = b;
+		std::cout << a.getRawBits() << std::endl;
+		std::cout << b.getRawBits() << std::endl;
+		std::cout << c.getRawBits() << std::endl;
+		return 0;
+}
