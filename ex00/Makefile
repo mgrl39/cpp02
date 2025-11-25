@@ -6,14 +6,25 @@
 #    By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/07 23:36:47 by meghribe          #+#    #+#              #
-#    Updated: 2025/11/15 23:55:21 by meghribe         ###   ########.fr        #
+#    Updated: 2025/11/25 20:36:01 by meghribe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := fixed
-SRC := Fixed.cpp main.cpp
+SRCS := Fixed.cpp main.cpp
+OBJS := $(SRCS:%=%.o)
+DEPS := $(OBJS:%=.d)
+CPPFLAGS := -MMD -MP -std=c++98 -g -fsanitize=address
+CPP := c++
 
+# add appropiate flags
 all: $(NAME)
+
+$(NAME): $(OBJS)
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $@
+
+%.cpp.o: %.cpp Makefile
+	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: clean
 clean:
@@ -24,5 +35,6 @@ fclean: clean
 	rm -rf $(NAME)
 
 .PHONY: re
-re:
-	fclean all
+re: fclean all
+
+-include $(DEPS)
