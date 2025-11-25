@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
+/*   Updated: 2025/11/25 21:42:57 by meghribe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FIXED_HPP
+# define FIXED_HPP
+
+/*
+ * An integer to store the fixed-point number value --> raw_bits
+ * A static constant integer to store the number of fractional bits. 
+ * 	Its value will always be the integer literal 8.
+ */
+class Fixed
+{
+	private:
+		int					fixed_point_nbr_value;
+		static const int	number_fract_bits = 8;
+
+	public:
+		Fixed(); 				// default constructor 
+		~Fixed();				// a destructor
+		Fixed& operator=(const Fixed& other);	// overloading copy assignment operator
+		Fixed(const Fixed&);			// copy assignment operator overload.
+		Fixed::Fixed(const int param);
+		int		getRawBits(void) const;
+		void	setRawBits(int const raw);
+
+};
+
+#endif
