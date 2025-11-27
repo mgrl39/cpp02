@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:53 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/25 21:51:32 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/27 20:09:08 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main( void ) {
 	Fixed a;
-	/*
+	
 	Fixed const b( 10 );
 	Fixed const c( 42.42f );
 	Fixed const d( b );
@@ -28,6 +28,6 @@ int main( void ) {
 	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	*/
+	
 	return 0;
 }
