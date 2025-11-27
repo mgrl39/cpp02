@@ -6,7 +6,7 @@
 #    By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/07 23:36:47 by meghribe          #+#    #+#              #
-#    Updated: 2025/11/25 20:40:59 by meghribe         ###   ########.fr        #
+#    Updated: 2025/11/27 19:55:57 by meghribe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME := fixed
 SRCS := Fixed.cpp main.cpp
 OBJS := $(SRCS:%=%.o)
 DEPS := $(OBJS:.o=.d)
+INCS := Fixed.hpp
 CPPFLAGS := -MMD -MP -std=c++98 -g -fsanitize=address
 CPP := c++
 
@@ -23,7 +24,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $@
 
-%.cpp.o: %.cpp Makefile
+%.cpp.o: %.cpp $(INCS) Makefile
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 .PHONY: clean

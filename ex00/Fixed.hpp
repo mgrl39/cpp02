@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/25 20:44:17 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/27 19:57:01 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 class Fixed
 {
 	private:
-		int					fixed_point_nbr_value;
+		int					raw_bits;
 		static const int	number_fract_bits = 8;
 
 	public:
