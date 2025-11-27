@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/11/07 23:36:47 by meghribe          #+#    #+#              #
-#    Updated: 2025/11/27 20:00:21 by meghribe         ###   ########.fr        #
+#    Created: 2025/11/27 19:54:07 by meghribe          #+#    #+#              #
+#    Updated: 2025/11/27 20:01:01 by meghribe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME): $(OBJS)
 %.cpp.o: %.cpp $(INCS) Makefile
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
-.PHONY: clean
+.PHONY:
 clean:
 	rm -rf $(OBJS)
 	rm -rf $(DEPS)

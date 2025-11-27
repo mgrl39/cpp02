@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:37:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/25 22:20:36 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/15 23:50:46 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,4 @@ int	Fixed::getRawBits(void) const
 void	Fixed::setRawBits(int const raw)
 {
 	this->raw_bits = raw;
-}
-
-// TODO: i think thats it
-Fixed::Fixed(const int param): raw_bits(param), number_fract_bits(8)
-{
-	std::cout << "Int constructor called" << std::endl;
-}
-
-// TODO: i think thats it
-std::ostream& Fixed::operator <<(std::ostream& os, const Fixed fixed)
-{
-	return (os);
 }
