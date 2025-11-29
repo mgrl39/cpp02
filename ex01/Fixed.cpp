@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:37:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/27 20:11:49 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/29 20:12:09 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,11 @@ int	Fixed::toInt( void ) const
 }
 
 // TODO
-std::ostream& operator<< (std::ostream& stream, const Fixed& fixed)
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 {
-	std::cout << "LOL" << std::endl;
+	(void)fixed;
+	os << "LOL";
+	//stream << dt.mo << '/' << dt.da << '/' << dt.yr;
+	return (os);
+
 }

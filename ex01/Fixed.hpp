@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/27 20:09:14 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/29 20:13:40 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ class Fixed
 		int		toInt( void ) const;
 		void	setRawBits(int const raw);
 };
+
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
