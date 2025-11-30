@@ -6,10 +6,11 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 20:46:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/29 20:46:07 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/30 21:05:43 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
 #include <iostream>
 int main( void ) {
 	Fixed a;
