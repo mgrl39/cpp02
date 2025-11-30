@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 20:30:31 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/30 21:43:58 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,28 @@ class Fixed
 		int		getRawBits(void) const;
 		int		toInt( void ) const;
 		void	setRawBits(int const raw);
+
+		Fixed operator>(const Fixed& other);
+		Fixed operator<(const Fixed& other);
+		Fixed operator>=(const Fixed& other);
+		Fixed operator<=(const Fixed& other);
+		Fixed operator==(const Fixed& other);
+		Fixed operator!=(const Fixed& other);
+		
+		Fixed operator+(const Fixed &n);
+		Fixed operator-(const Fixed &n);
+		Fixed operator*(const Fixed&n);
+		Fixed operator/(const Fixed&n);
+
+		Fixed& operator++();
+		Fixed operator++(int);
+		Fixed& operator--();
+		Fixed operator--(int);
+
+		static Fixed min(const Fixed& a, const Fixed& b);
+		static Fixed min(Fixed& a, Fixed& b);
+		static Fixed max(const Fixed& a, const Fixed& b);
+		static Fixed max(Fixed& a, Fixed& b);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);

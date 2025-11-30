@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:37:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 21:12:09 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/30 21:44:46 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,21 @@ int	Fixed::toInt( void ) const
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 {
 	return (os << (fixed.toFloat()));
+}
+
+static Fixed min(const Fixed& a, const Fixed& b)
+{
+
+}
+
+static Fixed min(Fixed& a, Fixed& b)
+{
+}
+
+static Fixed max(const Fixed& a, const Fixed& b)
+{
+}
+
+static Fixed max(Fixed& a, Fixed& b)
+{
 }
