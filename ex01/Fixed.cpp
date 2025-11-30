@@ -6,11 +6,12 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:37:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 20:20:11 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/30 20:30:28 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <math.h>
 #include <iostream>
 
 Fixed::Fixed(): raw_bits(0)
