@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:37:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 21:02:32 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/11/30 21:13:07 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed& other) 
+Fixed::Fixed(const Fixed& other) : raw_bits(other.getRawBits())
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
