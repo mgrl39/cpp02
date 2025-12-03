@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 20:30:31 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/12/03 16:30:16 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Fixed
 		Fixed(); 				// default constructor 
 		~Fixed();				// a destructor
 		Fixed& operator=(const Fixed& other);	// overloading copy assignment operator
-		Fixed(const Fixed&);			// copy assignment operator overload.
+		Fixed(const Fixed& other);		// copy assignment operator overload.
 		Fixed(const int param);
 		Fixed(const float param);
 		float	toFloat( void ) const;

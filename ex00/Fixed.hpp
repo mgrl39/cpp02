@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/27 19:57:01 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/12/03 16:30:49 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Fixed
 		Fixed(); 				// default constructor 
 		~Fixed();				// a destructor
 		Fixed& operator=(const Fixed& other);	// overloading copy assignment operator
-		Fixed(const Fixed&);			// copy assignment operator overload.
+		Fixed(const Fixed& other);		// copy assignment operator overload.
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 
