@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:36:58 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 21:43:58 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/12/03 12:27:21 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,25 @@ class Fixed
 		int		toInt( void ) const;
 		void	setRawBits(int const raw);
 
-		Fixed operator>(const Fixed& other);
-		Fixed operator<(const Fixed& other);
-		Fixed operator>=(const Fixed& other);
-		Fixed operator<=(const Fixed& other);
-		Fixed operator==(const Fixed& other);
-		Fixed operator!=(const Fixed& other);
+		bool operator>(const Fixed& other) const;
+		bool operator<(const Fixed& other) const;
+		bool operator>=(const Fixed& other) const;
+		bool operator<=(const Fixed& other) const;
+		bool operator==(const Fixed& rhs) const;
+		bool operator!=(const Fixed& rhs) const;
 		
-		Fixed operator+(const Fixed &n);
-		Fixed operator-(const Fixed &n);
-		Fixed operator*(const Fixed&n);
-		Fixed operator/(const Fixed&n);
+		
+		Fixed operator+(const Fixed &other);
+		/*
+		Fixed operator-(const Fixed &other);
+		Fixed operator*(const Fixed &other);
+		Fixed operator/(const Fixed &other);
 
 		Fixed& operator++();
 		Fixed operator++(int);
 		Fixed& operator--();
 		Fixed operator--(int);
+		*/
 
 		static Fixed min(const Fixed& a, const Fixed& b);
 		static Fixed min(Fixed& a, Fixed& b);

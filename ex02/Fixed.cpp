@@ -6,7 +6,7 @@
 /*   By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 23:37:04 by meghribe          #+#    #+#             */
-/*   Updated: 2025/11/30 21:52:24 by meghribe         ###   ########.fr       */
+/*   Updated: 2025/12/03 12:27:35 by meghribe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,26 @@ int	Fixed::toInt( void ) const
 	return (this->getRawBits() >> this->number_fract_bits);
 }
 
-std::ostream& Fixed::operator>(const Fixed& other)
+// TODO check this
+Fixed	Fixed::operator+(const Fixed &other)
 {
-	return (this->getRawBits() > other.getRawBits());
+	return (this->getRawBits() + other.getRawBits());
+}
+
+bool Fixed::operator>(const Fixed& other) const
+{
+	// TODO
+	return (true);
+}
+
+bool Fixed::operator==(const Fixed& rhs) const
+{
+	return (this->getRawBits() == rhs.getRawBits());
+}
+
+bool Fixed::operator!=(const Fixed& rhs) const
+{
+	return (this->getRawBits() != rhs.getRawBits());
 }
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
@@ -88,17 +105,20 @@ std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 
 static Fixed min(const Fixed& a, const Fixed& b)
 {
-
+	return (a.getRawBits() < b.getRawBits() ? a : b);
 }
 
 static Fixed min(Fixed& a, Fixed& b)
 {
+	return (a.getRawBits() < b.getRawBits() ? a : b);
 }
 
 static Fixed max(const Fixed& a, const Fixed& b)
 {
+	return (a.getRawBits() > b.getRawBits() ? a : b);
 }
 
 static Fixed max(Fixed& a, Fixed& b)
 {
+	return (a.getRawBits() > b.getRawBits() ? a : b);
 }
