@@ -6,16 +6,15 @@
 #    By: meghribe <meghribe@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/07 23:36:47 by meghribe          #+#    #+#              #
-#    Updated: 2025/11/27 20:00:21 by meghribe         ###   ########.fr        #
+#    Updated: 2025/12/03 13:15:47 by meghribe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := fixed
 SRCS := Fixed.cpp main.cpp
 OBJS := $(SRCS:%=%.o)
-DEPS := $(OBJS:.o=.d)
 INCS := Fixed.hpp
-CPPFLAGS := -MMD -MP -std=c++98 -g -fsanitize=address
+CPPFLAGS := -std=c++98 -g -fsanitize=address
 CPP := c++
 
 .PHONY: all
@@ -30,7 +29,6 @@ $(NAME): $(OBJS)
 .PHONY: clean
 clean:
 	rm -rf $(OBJS)
-	rm -rf $(DEPS)
 
 .PHONY: fclean
 fclean: clean
@@ -38,5 +36,3 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
-
--include $(DEPS)
